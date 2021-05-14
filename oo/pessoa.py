@@ -1,4 +1,6 @@
 class Person:
+    olhos = 2
+
     def __init__(self, *children, name=None, year=0):
         self.year = year
         self.name = name
@@ -18,5 +20,8 @@ if __name__ == '__main__':
     for filhos in wes.children:
         print(filhos.year)
     p.sobre = 'eu'
-    del p.sobre
     print(p.sobre)
+    del p.sobre
+    print(p.__dict__)
+    print(p.olhos)
+    print(eu.olhos)
