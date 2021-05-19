@@ -9,6 +9,14 @@ class Person:
     def cumprimentar(self):
         return 'Hello'
 
+    @staticmethod
+    def metodo_estatico():
+        return 123
+
+    @classmethod
+    def metodo_classe(cls):
+        return f'{cls} - {cls.olhos}'
+
 
 if __name__ == '__main__':
     p = Person()
@@ -25,3 +33,5 @@ if __name__ == '__main__':
     print(p.__dict__)
     print(p.olhos)
     print(eu.olhos)
+    print(p.metodo_estatico(), eu.metodo_estatico())
+    print(p.metodo_classe(), eu.metodo_classe())
