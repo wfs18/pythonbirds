@@ -38,6 +38,27 @@
 """
 
 
+class Car:
+    def __init__(self, motor, direction):
+        self.motor = motor
+        self.direction = direction
+
+    def speedometer(self):
+        return self.motor.velocity
+
+    def speed_up(self):
+        return self.motor.speed_up()
+
+    def stop(self):
+        return self.motor.stop()
+
+    def right(self):
+        return self.direction.right_rotation
+
+    def left(self):
+        return self.direction.left_rotation
+
+
 class Motor:
     def __init__(self):
         self.velocity = 0
